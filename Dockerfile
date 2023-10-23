@@ -14,3 +14,5 @@ RUN cargo build --release
 # But beware that some images have old glibc which makes rust unhappy
 FROM fedora:34 AS runner
 COPY --from=builder /prod/target/release/fly-rust /bin
+
+CMD ["bin/fly-rust"]
