@@ -31,8 +31,8 @@ port     = 443
 [[services.http_checks]]
 path            = "/health"
 method          = "get"
-timeout         = "2000"
-interval        = "10000"
+timeout         = "2s"
+interval        = "10s"
 protocol        = "http"
 grace_period    = "5s"
 tls_skip_verify = false
